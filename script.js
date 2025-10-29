@@ -119,13 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Mobile menu toggle (for future enhancement)
-// This is a placeholder for mobile menu functionality if needed later
-function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('mobile-active');
-}
-
 // Add real-time form validation feedback
 const formInputs = document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea');
 formInputs.forEach(input => {
@@ -160,8 +153,8 @@ function validateField(field) {
     
     // Phone validation (basic)
     if (field.type === 'tel' && value) {
-        const phoneRegex = /^[\d\s\-\+\(\)]+$/;
-        if (!phoneRegex.test(value)) {
+        const phoneRegex = /^[\d\s\-\+\(\)]{10,}$/;
+        if (!phoneRegex.test(value) || value.replace(/[\s\-\+\(\)]/g, '').length < 10) {
             markFieldInvalid(field, 'Please enter a valid phone number');
             return false;
         }

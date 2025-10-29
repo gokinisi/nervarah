@@ -313,6 +313,7 @@ header {
 
 .form-group textarea {
     resize: vertical;
+    min-height: 120px;
 }
 
 .submit-button {
