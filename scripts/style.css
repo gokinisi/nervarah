@@ -1,0 +1,34 @@
+body {
+h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #80CBC4; /* light teal */
+.text-app {
+  background: #fdfdfd;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.text-app input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.text-app button {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.text-app button:hover {
+  background-color: #444;
+}
+
