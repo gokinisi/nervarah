@@ -1,0 +1,36 @@
+body {
+  font-family: "Inter", sans-serif;
+  color: #2e2e2e;
+  background: #faf7f6;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+header {
+  background: #f3ecea;
+  padding: 60px 20px 40px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: #8c5b4a;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #8c5b4a;
+}
+
+section {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+footer {
+  margin: 60px 0 20px;
+  color: #7a6d65;
+  font-size: 0.9rem;
+}
