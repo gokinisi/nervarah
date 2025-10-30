@@ -28,6 +28,68 @@ body{
   background: linear-gradient(135deg, #c3cfe2 0%, #f5f7fa 100%);
   border-bottom: 1px solid #eee;
 }
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(180deg, #fafafa 0%, #f1f1f1 100%);
+  color: #222;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.hero h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8em;
+  color: #6c63ff;
+  margin-top: 40px;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 1.1em;
+  margin-bottom: 40px;
+}
+
+.text-app, .journal {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 15px 0 5px;
+  color: #444;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5348d4;
+}
+
 .brand{
   font-family: 'Dancing Script', cursive;
   font-weight: 700;
