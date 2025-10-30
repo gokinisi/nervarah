@@ -137,6 +137,26 @@ select:focus {
 .confirm{
   margin-top: 12px;
   color: #0a7a55;
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8em;
+  color: #6c63ff;
+  margin-bottom: 10px;
+}
+
+label, select {
+  display: block;
+  margin-top: 15px;
+  font-size: 1em;
+  color: #444;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
 }
 
 /* Footer */
