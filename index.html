@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nervarah | Iris Motivational Texts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,25 +16,28 @@
   </header>
 
   <!-- Iris Text App -->
-  <section class="iris">
-   <section class="text-app">
-  <h2>Iris Daily Texts</h2>
-<select id="focus" name="focus">
+  <section class="text-app">
+    <h2>Iris Daily Texts</h2>
+    <p>Choose your focus and receive daily Nervarah affirmations by text message.</p>
 
-  <p>Choose your focus and receive daily Nervarah affirmations by text message.</p>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="tel" id="phone" placeholder="Your Phone Number" required />
+      <input type="email" id="email" placeholder="Your Email" required />
 
-  <form id="signupForm">
-    <input type="text" id="name" placeholder="Your Name" required />
-    <input type="tel" id="phone" placeholder="Your Phone Number" required />
-    <input type="email" id="email" placeholder="Your Email" required />
+      <label for="focus">Focus Area</label>
+      <select id="focus" name="focus" required>
+        <option value="">Select your focus...</option>
+        <option value="exercise">🏋️‍♀️ Exercise Motivation</option>
+        <option value="mindset">🧠 Positive Brain Practice</option>
+        <option value="relationship">💞 Relationship Strength</option>
+      </select>
 
-    <label for="focus">Focus Area</label>
-    <select id="focus" name="focus" required>
-      <option value="">Select your focus...</option>
-      <option value="exercise">🏋️‍♀️ Exercise Motivation</option>
-      <option value="mindset">🧠 Positive Brain Practice</option>
-      <option value="relationship">💞 Relationship Strengt
+      <button type="button" id="payButton">Subscribe $8.99 / month</button>
+    </form>
 
+    <p id="confirmation" style="display:none;">✅ Thank you! You’ll receive your first Iris message soon.</p>
+  </section>
 
   <!-- Footing Journal Section -->
   <section class="journal">
@@ -50,4 +53,3 @@
   <script src="scripts/payment.js"></script>
 </body>
 </html>
-
