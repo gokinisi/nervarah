@@ -5,102 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nervarah | Iris Motivational Texts</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-      background: linear-gradient(180deg, #fafafa 0%, #f1f1f1 100%);
-      color: #222;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
+</head>
+<body>
 
-    header {
-      padding: 40px 20px 20px;
-    }
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Nervarah Wellness</h1>
+    <p class="subtitle">Mindset • Nervous System • Energy Alignment</p>
+  </header>
 
-    .iris-logo {
-      font-size: 2.2em;
-      font-weight: 700;
-      color: #6c63ff;
-      letter-spacing: 1px;
-    }
+  <!-- Iris Text App -->
+  <section class="iris">
+    <h2>✨ Iris Daily Texts ✨</h2>
+    <p>Receive uplifting, nervous-system-based affirmations every morning.</p>
 
-    .subtitle {
-      color: #666;
-      font-size: 1.1em;
-    }
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="tel" id="phone" placeholder="Your Phone Number" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <button type="button" id="payButton">Subscribe $8.99/month</button>
+    </form>
 
-    .card {
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
-      padding: 30px;
-      max-width: 480px;
-      margin: 40px auto;
-      text-align: left;
-    }
+    <p id="confirmation" style="display:none;">✅ Thank you! You’ll receive your first Iris message soon.</p>
+  </section>
 
-    h2 {
-      text-align: center;
-      color: #333;
-    }
+  <!-- Footing Journal Section -->
+  <section class="journal">
+    <h2>🪶 Footing Journal</h2>
+    <p>Ground your thoughts, find your rhythm, and track your emotional flow.</p>
+    <a class="button" href="scripts/footing-journal/index.html">Open Journal →</a>
+  </section>
 
-    label {
-      display: block;
-      margin-top: 15px;
-      color: #444;
-      font-weight: 600;
-      font-size: 0.95em;
-    }
+  <footer>
+    <p>© 2025 Nervarah Wellness • Designed by Kris Love</p>
+  </footer>
 
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1em;
-    }
-
-    button {
-      margin-top: 25px;
-      width: 100%;
-      background: #6c63ff;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      padding: 12px 20px;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    button:hover {
-      background: #4f46e5;
-    }
-
-    footer {
-      margin-top: 60px;
-      padding-bottom: 40px;
-      color: #9ca3af;
-      font-size: 0.9em;
-    }
-
-    .hero {
-      background: #fff;
-      padding: 80px 20px 40px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .hero h1 {
-      font
-<form id="signupForm">
-  <input type="text" id="name" placeholder="Your Name" required />
-  <input type="tel" id="phone" placeholder="Your Phone Number" required />
-  <input type="email" id="email" placeholder="Your Email" required />
-  <button type="button" id="payButton">Subscribe $8.99/month</button>
-</form>
-<p id="confirmation" style="display:none;">✅ Thank you! You’ll receive your first message soon.</p>
+  <script src="scripts/payment.js"></script>
+</body>
+</html>
 
