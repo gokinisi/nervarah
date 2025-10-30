@@ -19,12 +19,24 @@
     <h2>✨ Iris Daily Texts ✨</h2>
     <p>Receive uplifting, nervous-system-based affirmations every morning.</p>
 
-    <form id="signupForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="tel" id="phone" placeholder="Your Phone Number" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <button type="button" id="payButton">Subscribe $8.99/month</button>
-    </form>
+   <form id="signupForm" class="form">
+  <input type="text" id="name" placeholder="Your Name" required />
+  <input type="tel" id="phone" placeholder="Your Phone Number" required />
+  <input type="email" id="email" placeholder="Your Email" required />
+
+  <label for="focus" class="dropdown-label">Choose your focus:</label>
+  <select id="focus" name="focus" required>
+    <option value="">Select your focus...</option>
+    <option value="exercise">💪 Exercise Motivation</option>
+    <option value="mindset">🧠 Positive Brain Practice</option>
+    <option value="relationship">💖 Relationship Strength</option>
+  </select>
+
+  <button type="button" id="payButton" class="btn">
+    Subscribe $8.99/month
+  </button>
+</form>
+
 
     <p id="confirmation" style="display:none;">✅ Thank you! You’ll receive your first Iris message soon.</p>
   </section>
