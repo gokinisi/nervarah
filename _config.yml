@@ -1,0 +1,6 @@
+exclude:
+  - scripts/
+  - footing-journal/
+  - node_modules/
+  - README.md
+
