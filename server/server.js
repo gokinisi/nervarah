@@ -43,4 +43,89 @@ app.post("/create-checkout-session", async (req, res) => {
 app.listen(3000, () => {
   console.log("✅ Stripe server running on port 3000");
 });
+import express from "express";
+import dotenv from "dotenv";
+import Stripe from "stripe";
+
+dotenv.config();
+const app = express();
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+app.use(express.static("public"));
+app.use(express.json());
+
+// Route for checkout session
+app.post("/create-checkout-session", async (req, res) => {
+  try {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      mode: "payment",
+      line_items: [
+        {
+          price_data: {
+            currency: "usd",
+            product_data: {
+              name: "Nervarah Beta Membership",
+              description: "Discounted beta user rate for early access to Nervarah app.",
+            },
+            unit_amount: 4900, // $49.00 (in cents)
+          },
+          quantity: 1,
+        },
+      ],
+      success_url: "http://localhost:3000/success.html",
+      cancel_url: "http://localhost:3000/cancel.html",
+    });
+
+    res.json({ url: session.url });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.listen(4242, () => console.log("Server running on http://localhost:4242"));
+// server/server.js — Nervarah Beta Payment Setup
+import express from "express";
+import dotenv from "dotenv";
+import Stripe from "stripe";
+
+dotenv.config();
+const app = express();
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+app.use(express.static("public"));
+app.use(express.json());
+
+// Create Stripe Checkout Session
+app.post("/create-checkout-session", async (req, res) => {
+  try {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      mode: "payment",
+      line_items: [
+        {
+          price_data: {
+            currency: "usd",
+            product_data: {
+              name: "Nervarah Beta Access",
+              description:
+                "Discounted beta membership for early users of the Nervarah platform.",
+            },
+            unit_amount: 4900, // $49.00 USD
+          },
+          quantity: 1,
+        },
+      ],
+      success_url: "http://localhost:3000/success.html",
+      cancel_url: "http://localhost:3000/cancel.html",
+    });
+
+    res.json({ url: session.url });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.listen(4242, () => console.log("✅ Server running on http://localhost:4242"));
 
