@@ -1,26 +1,23 @@
 {
   "name": "nervarahsite",
   "version": "1.0.0",
-  "description": "<<<<<<< HEAD # nervarah-iris # nervarah-iris ======= # nervarah Webpage for health + beauty tech consulting  >>>>>>> 5e9e2c1e5237245ce4f7e2b5567305ed8656eee1",
+  "description": "Nervarah Wellness website for health and beauty tech consulting",
   "main": "index.js",
+  "dependencies": {
+    "stripe": "^19.3.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx serve ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gokinisi/nervarah.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Kristin Schutz",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gokinisi/nervarah/issues"
   },
-  "homepage": "https://github.com/gokinisi/nervarah#readme",
-  "dependencies": {
-    "body-parser": "^2.2.0",
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "stripe": "^19.2.0"
-  }
+  "homepage": "https://github.com/gokinisi/nervarah#readme"
 }

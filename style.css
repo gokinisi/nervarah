@@ -233,3 +233,16 @@ footer{
   color: #888;
   font-size: 14px;
 }
+.footer-btn {
+  background: #2a7f74;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.footer-btn:hover {
+  background: #246e64;
+}
+
