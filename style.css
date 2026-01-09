@@ -225,7 +225,32 @@ select {
   visibility: visible;
   opacity: 1;
   z-index: 10;
+}.legal-section {
+  margin: 36px auto;
+  max-width: 980px;
+  padding: 0 16px;
+  text-align: center;
 }
+.legal-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.legal-btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.18);
+  text-decoration: none;
+  color: inherit;
+}
+.legal-btn:hover { border-color: rgba(0,0,0,0.35); }
+.container { max-width: 980px; margin: 0 auto; padding: 24px 16px; }
+.agreement-text { line-height: 1.6; }
+.legal-back { text-decoration: none; }
+
 
 /* Footer */
 footer{
