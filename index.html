@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,32 +14,73 @@
 </head>
 
 <body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>Nervarah Wellness</h1>
-    <p class="subtitle">Mindset. Motivation. Momentum. </p>
-  </header>
+  <!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
 
-  <!-- Iris Text App -->
-  <section class="text-app">
-    <h2>Iris Daily Mojo</h2>
-    <p>Choose your focus and accomplish your goals.
-    Receive daily Nervarah affirmations + flourish in life.</p>
+  <div class="hero-inner">
+    <div class="hero-card">
+      <h1 class="hero-title">Nervarah</h1>
+      <p class="hero-subtitle">
+        Daily micro-messages designed to build calm focus, consistency, and healthier mindsets.
+      </p>
 
-    <form id="signupForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="tel" id="phone" placeholder="Your Phone Number" required />
-      <input type="email" id="email" placeholder="Your Email" required />
+      <div class="button-grid">
+        <button type="button" class="track-btn" data-track="exercise_motivation">
+          Exercise Motivation🏋️‍♀️ 
+        </button>
 
-      <label for="focus">Focus Area</label>
-      <select id="focus" name="focus" required>
-        <option value="">Select your focus...</option>
-        <option value="exercise">🏋️‍♀️ Exercise Motivation</option>
-        <option value="mindset">🧠 Positive Brain Practice</option>
-        <option value="relationship">🧑 Conscious Interpersonal Communication</option>
-        <option value="phone">💡 Conscious Social Media / Phone Use</option>
-      </select>
+        <button type="button" class="track-btn" data-track="conscious_social_media_training">
+          Conscious Social Media Training💡
+        </button>
+
+        <button type="button" class="track-btn" data-track="conscious_communication">
+          Conscious Communication 🧑
+        </button>
+
+<button type="button" class="track-btn" data-track="practice_positive_mindset">
+          Practice Positive Mindset 🧠
+        </button>
+      </div>
+
+      <p class="hero-note" id="selectedTrackText">
+        Choose a track to personalize your messages.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNUP SECTION -->
+<section class="signup" id="signup">
+  <div class="signup-inner">
+    <h2 class="signup-title">Online Coaching Support?</h2>
+    <p class="signup-subtitle">Accept the terms, then subscribe for monthly group coaching services with a qualified therapist.</p>
+
+   
+
+      <!-- Track chosen from the 4 buttons -->
+      <input type="hidden" name="track" id="track" value="" />
+
+      <label class="check-row">
+        <input type="checkbox" id="ndaAgree" />
+        I have read and agree to the NDA.
+      </label>
+
+      <label class="check-row">
+        <input type="checkbox" id="smsConsent" />
+        I consent to receive SMS messages. Reply STOP to opt out.
+      </label>
+
+      
+ 
+
+      <div id="smsNdaStatus" class="status"></div>
     </form>
+  </div>
+</section>
+
+     
+
 
     <!-- Stripe Payment Link Button -->
     <a
@@ -59,6 +99,42 @@
       the nervous system stays on high alert. Mindset training practices helps restore a sense of safety so clarity
       and connection can return. Nervarah supports your practice towards achieving equilibrium.
     </p>
+
+    <p id="confirmation" style="display:none;">✅ Thank you! You’ll receive your first Iris message soon.</p>
+  </section>
+
+  <!-- Footing Journal -->
+  <section class="journal">
+    <h2>🪶 Footing Journal</h2>
+    <p>Ground your thoughts, find your rhythm, and track your emotional flow.</p>
+    <a class="button" href="https://footing-journal.vercel.app" target="_blank" rel="noopener">
+      Open Journal →
+    </a>
+  </section>
+  </body>
+</html>
+<footer class="footer">
+  <section class="legal-section">
+  <h3>Legal</h3>
+  <div class="legal-links">
+    <a class="legal-btn" href="/legal/liability-waiver.html" target="_blank">Liability Waiver</a>
+    <a class="legal-btn" href="/legal/assumption-of-risk.html" target="_blank">Assumption of Risk</a>
+    <a class="legal-btn" href="/legal/nda.html" target="_blank">NDA</a>
+    <a class="legal-btn" href="/legal/coaching-agreement.html" target="_blank">Coaching Agreement</a>
+  </div>
+</section>
+
+
+  <p>© 2025 Nervarah Wellness • Designed by Kris Love</p>
+</footer>
+</body>
+</html>
+
+
+
+
+  
+
 
     <p id="confirmation" style="display:none;">✅ Thank you! You’ll receive your first Iris message soon.</p>
   </section>

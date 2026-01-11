@@ -6,3 +6,6 @@ scripts/footing-journal/
 .env
 .DS_Store
 path/
+.DS_Store
+*.rtf
+liby-frontend/
