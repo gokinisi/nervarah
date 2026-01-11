@@ -5,3 +5,4 @@ dist/
 scripts/footing-journal/
 .env
 .DS_Store
+path/
