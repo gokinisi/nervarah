@@ -115,5 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (subscribeBtn) subscribeBtn.disabled = false;
     }
   });
-});
+})console.log("FORM.JS VERSION:", "c1afcd55");
+;
 
