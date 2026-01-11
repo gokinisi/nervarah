@@ -4,3 +4,4 @@ dist/
 .DS_Store
 scripts/footing-journal/
 .env
+.DS_Store
