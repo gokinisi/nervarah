@@ -1,0 +1,107 @@
+[
+  {
+    "id": "sub_1768040058941",
+    "createdAt": "2026-01-10T10:14:18.941Z",
+    "fullName": "Test User",
+    "email": "test@nervarah.com",
+    "phone": "+15551234567",
+    "status": "ACTIVE",
+    "consent": {
+      "smsConsent": "YES",
+      "ndaAgree": "YES",
+      "ndaVersion": "2026-01-10",
+      "pageUrl": "http://localhost/test",
+      "userAgent": "curl"
+    }
+  },
+  {
+    "id": "sub_1768042302247",
+    "createdAt": "2026-01-10T10:51:42.247Z",
+    "fullName": "Test User",
+    "email": "kris@nervarah.com",
+    "phone": "+15613736368",
+    "status": "ACTIVE",
+    "consent": {
+      "smsConsent": "YES",
+      "ndaAgree": "YES",
+      "ndaVersion": "2026-01-10",
+      "pageUrl": "http://localhost/test",
+      "userAgent": "curl"
+    }
+  },
+  {
+    "id": "sub_1768042321302",
+    "createdAt": "2026-01-10T10:52:01.302Z",
+    "fullName": "Test User",
+    "email": "kris@nervarah.com",
+    "phone": "+15613736368",
+    "status": "ACTIVE",
+    "consent": {
+      "smsConsent": "YES",
+      "ndaAgree": "YES",
+      "ndaVersion": "2026-01-10",
+      "pageUrl": "http://localhost/test",
+      "userAgent": "curl"
+    }
+  },
+  {
+    "id": "sub_1768042674467",
+    "createdAt": "2026-01-10T10:57:54.467Z",
+    "fullName": "Test User",
+    "email": "kris@nervarah.com",
+    "phone": "+15613736368",
+    "status": "ACTIVE",
+    "consent": {
+      "smsConsent": "YES",
+      "ndaAgree": "YES",
+      "ndaVersion": "2026-01-10",
+      "pageUrl": "http://localhost/test",
+      "userAgent": "curl"
+    }
+  },
+  {
+    "id": "sub_1768044339217",
+    "createdAt": "2026-01-10T11:25:39.217Z",
+    "fullName": "Test User",
+    "email": "kris@nervarah.com",
+    "phone": "+15613736368",
+    "status": "ACTIVE",
+    "consent": {
+      "smsConsent": "YES",
+      "ndaAgree": "YES",
+      "ndaVersion": "2026-01-10",
+      "pageUrl": "http://localhost/test",
+      "userAgent": "curl"
+    }
+  },
+  {
+    "id": "sub_1768048227185",
+    "createdAt": "2026-01-10T12:30:27.185Z",
+    "fullName": "Test User",
+    "email": "kris@nervarah.com",
+    "phone": "+15613736368",
+    "status": "ACTIVE",
+    "consent": {
+      "smsConsent": "YES",
+      "ndaAgree": "YES",
+      "ndaVersion": "2026-01-10",
+      "pageUrl": "http://localhost/test",
+      "userAgent": "curl"
+    }
+  },
+  {
+    "id": "sub_1768048428979",
+    "createdAt": "2026-01-10T12:33:48.979Z",
+    "fullName": "Test User",
+    "email": "kris@nervarah.com",
+    "phone": "+15613736368",
+    "status": "ACTIVE",
+    "consent": {
+      "smsConsent": "YES",
+      "ndaAgree": "YES",
+      "ndaVersion": "2026-01-10",
+      "pageUrl": "http://localhost/test",
+      "userAgent": "curl"
+    }
+  }
+]

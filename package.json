@@ -4,7 +4,12 @@
   "description": "Nervarah Wellness website for health and beauty tech consulting",
   "main": "index.js",
   "dependencies": {
-    "stripe": "^19.3.0"
+    "@vonage/sms": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "stripe": "^19.3.1",
+    "twilio": "^5.11.2"
   },
   "scripts": {
     "dev": "npx serve ."

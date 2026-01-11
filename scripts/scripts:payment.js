@@ -215,7 +215,96 @@ app.post('/signup', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);
 });
+import express from "express";
+import twilio from "twilio";
 
+const app = express();
+app.use(express.json());
+
+const {
+  TWILIO_ACCOUNT_SID,
+  TWILIO_AUTH_TOKEN,
+  TWILIO_MESSAGING_SERVICE_SID
+} = process.env;
+
+const client = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
+
+function normalizePhone(p) {
+  // Minimal normalization; you can strengthen later
+  return (p || "").trim();
+}
+
+app.post("/api/sms-signup", async (req, res) => {
+  try {
+    const { fullName, email, phone, smsConsent, pageUrl } = req.body || {};
+
+    if (!phone) return res.status(400).json({ ok: false, error: "Phone is required" });
+    if (smsConsent !== "YES") return res.status(400).json({ ok: false, error: "SMS consent is required" });
+
+    const to = normalizePhone(phone);
+
+    // 1) Persist consent (Sheets/DB) BEFORE messaging (recommended)
+    // TODO: write to Google Sheets / database with timestamp, pageUrl, etc.
+
+    // 2) Send confirmation/welcome SMS
+    await client.messages.create({
+      messagingServiceSid: TWILIO_MESSAGING_SERVICE_SID,
+      to,
+      body:
+        "Nervarah: You’re subscribed to daily texts. Msg&data rates may apply. Reply STOP to unsubscribe, HELP for help.",
+    });
+
+    return res.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ ok: false, error: "Server error" });
+  }
+});
+export async function sendSmsStub({ to, body }) {
+  console.log("STUB SMS (not sent):", { to, body });
+  return { ok: true, provider: "stub" };
+}
+
+
+app.listen(3000, () => console.log("Server running on :3000"));
+
+function doPost(e) {
+  try {
+    const body = JSON.parse(e.postData.contents || "{}");
+
+    const expected = PropertiesService.getScriptProperties().getProperty("SIGNUP_TOKEN") || "";
+    if (expected && body.token !== expected) {
+      return ContentService
+        .createTextOutput(JSON.stringify({ ok: false, error: "Unauthorized" }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const sheet = ss.getSheetByName("Signups") || ss.getSheets()[0];
+
+    sheet.appendRow([
+      new Date().toISOString(),
+      body.fullName || "",
+      body.email || "",
+      body.phone || "",
+      body.ndaAgree || "",
+      body.smsConsent || "",
+      body.ndaVersion || "",
+      body.pageUrl || "",
+      body.userAgent || "",
+      body.provider || "",
+      body.notes || ""
+    ]);
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ ok: true }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ ok: false, error: String(err) }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
 
 
 

@@ -126,6 +126,35 @@ app.post("/create-checkout-session", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+import { sendSmsStub } from "./smsStub.js";
+// Later: import { sendSmsTelnyx } from "./smsTelnyx.js" etc.
+
+export function getMessenger() {
+  const provider = (process.env.SMS_PROVIDER || "stub").toLowerCase();
+
+  if (provider === "stub") {
+    return async ({ to, body }) => sendSmsStub({ to, body });
+  }
+
+  // Example placeholder for later:
+  // if (provider === "telnyx") return async ({to, body}) => sendSmsTelnyx({to, body});
+
+  throw new Error(`Unsupported SMS_PROVIDER: ${provider}`);
+}
+import { getMessenger } from "./providers/index.js";
+
+const sendMessage = getMessenger();
+
+app.post("/api/sms-signup", async (req, res) => {
+  // validate, store consent...
+  // Instead of Twilio:
+  await sendMessage({ to: req.body.phone, body: "Welcome to Nervarah daily texts." });
+
+  res.json({ ok: true, note: "Queued (stub provider). Will deliver when SMS is enabled." });
+});
+
+
 
 app.listen(4242, () => console.log("✅ Server running on http://localhost:4242"));
+app.post("/api/sms-signup", async (req, res) => {
 

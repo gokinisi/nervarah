@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nervarah | NDA</title>
+  <title>Nervarah | NDA + Daily Text Signup</title>
   <link rel="stylesheet" href="/style.css" />
+  <script src="/js/form.js" defer></script>
 </head>
 
 <body>
@@ -14,7 +15,9 @@
   </header>
 
   <main class="container agreement">
-    <p class="intro">This NDA protects confidential information shared between Nervarah and collaborators, testers, or partners.</p>
+    <p class="intro">
+      This NDA protects confidential information shared between Nervarah and collaborators, testers, or partners.
+    </p>
 
     <div class="agreement-text">
       <p><strong>1. Confidential Information.</strong> “Confidential Information” includes all data, ideas, designs, software, and methods disclosed by Nervarah.</p>
@@ -27,105 +30,39 @@
       <p><strong>8. Governing Law.</strong> Florida, USA.</p>
     </div>
 
-    <form id="ndaForm" class="form">
-      <label for="ndaName">Full Name</label>
-      <input type="text" id="ndaName" name="ndaName" required>
+    <hr style="margin:24px 0;" />
 
-      <label for="ndaEmail">Email</label>
-      <input type="email" id="ndaEmail" name="ndaEmail" required>
+    <h2>Sign NDA + Subscribe to Daily Texts</h2>
 
-      <label class="checkbox">
-        <input type="checkbox" id="ndaAgree" required>
+    <form id="smsNdaForm" class="form">
+      <label for="fullName">Full Name / Company *</label>
+      <input type="text" id="fullName" name="fullName" required />
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Mobile Number *</label>
+      <input type="tel" id="phone" name="phone" placeholder="+15551234567" required />
+
+      <label class="checkbox" style="display:block;margin-top:10px;">
+        <input type="checkbox" id="ndaAgree" name="ndaAgree" required />
         I have read and agree to the Nervarah Non-Disclosure Agreement.
       </label>
 
-      <button type="submit">Sign NDA</button>
+      <label class="checkbox" style="display:block;margin-top:10px;">
+        <input type="checkbox" id="smsConsent" name="smsConsent" required />
+        I agree to receive automated daily text messages from Nervarah. Message frequency is daily.
+        Message & data rates may apply. Reply STOP to unsubscribe, HELP for help.
+      </label>
+
+      <input type="hidden" name="ndaVersion" value="2026-01-09" />
+
+      <button type="submit">Complete Signup</button>
+
+      <p id="smsNdaStatus" style="margin-top:12px;"></p>
     </form>
 
     <p><a href="/" class="legal-back">← Back to Home</a></p>
   </main>
-
-  <script src="/js/form.js"></script>
 </body>
 </html>
-<form id="nervarah-nda-form" style="max-width:720px">
-  <h2>Mutual Non-Disclosure Agreement — Nervarah Wellness & Technology</h2>
-
-  <p style="font-size:14px;line-height:1.5">
-    By submitting this form, you acknowledge that you have read and agree to the
-    Nervarah Mutual NDA for Future Partners & Collaborators.
-  </p>
-
-  <label style="display:block;margin-top:12px;">Full Name / Company *</label>
-  <input name="fullName" required style="width:100%;padding:10px;margin-top:6px;" />
-
-  <label style="display:block;margin-top:12px;">Email *</label>
-  <input name="email" type="email" required style="width:100%;padding:10px;margin-top:6px;" />
-
-  <label style="display:block;margin-top:12px;">Typed Signature (type your full name) *</label>
-  <input name="signature" required style="width:100%;padding:10px;margin-top:6px;" />
-
-  <label style="display:block;margin-top:12px;">Date</label>
-  <input name="signedDate" id="signedDate" readonly style="width:100%;padding:10px;margin-top:6px;background:#f3f3f3;" />
-
-  <label style="display:block;margin-top:12px;">
-    <input type="checkbox" name="agree" required />
-    I have read and agree to the Nervarah Mutual NDA for Future Partners.
-  </label>
-
-  <!-- Optional: store which NDA version they accepted -->
-  <input type="hidden" name="ndaVersion" value="2026-01-09" />
-
-  <button type="submit" style="margin-top:16px;padding:12px 18px;">
-    Sign NDA
-  </button>
-
-  <p id="status" style="margin-top:12px;font-size:14px;"></p>
-</form>
-
-<script>
-  // Set date in user's browser
-  (function(){
-    const el = document.getElementById("signedDate");
-    const d = new Date();
-    // ISO date like 2026-01-09
-    el.value = d.toISOString().slice(0,10);
-  })();
-
-  const FORM_ENDPOINT = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
-
-  document.getElementById("nervarah-nda-form").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const status = document.getElementById("status");
-    status.textContent = "Submitting...";
-
-    const form = e.target;
-    const data = Object.fromEntries(new FormData(form).entries());
-
-    // Basic guard: checkbox must be checked due to required, but keep it explicit
-    data.agree = form.querySelector('input[name="agree"]').checked ? "YES" : "NO";
-    data.userAgent = navigator.userAgent; // optional
-    data.pageUrl = window.location.href;  // optional
-
-    try {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      const out = await res.json();
-      if (!res.ok || !out.ok) throw new Error(out.error || "Submission failed");
-
-      status.textContent = "Thank you — your NDA has been recorded.";
-      form.reset();
-
-      // Reset date after reset
-      const el = document.getElementById("signedDate");
-      el.value = new Date().toISOString().slice(0,10);
-
-    } catch (err) {
-      status.textContent = "Error: " + err.message;
-    }
-  });
-</script>
