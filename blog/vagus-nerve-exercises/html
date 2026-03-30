@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="6 simple, gentle vagus nerve stimulation exercises you can do at home to regulate your nervous system.">
+    <title>Vagus Nerve Stimulation: 6 Simple Exercises You Can Do Anywhere • Nervarah</title>
+    <style>
+        :root {
+            --sage: #8fa88f;
+            --beige: #f8f4ed;
+            --text: #3a3a3a;
+            --light-text: #555;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background-color: var(--beige);
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            color: var(--sage);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .article-title {
+            font-size: 2.4rem;
+            line-height: 1.3;
+            color: #2c3e2f;
+            margin: 2rem 0 0.5rem;
+        }
+
+        .meta {
+            color: #777;
+            font-size: 1.05rem;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: #2c3e2f;
+            margin: 3rem 0 1rem;
+            font-size: 1.75rem;
+        }
+
+        h3 {
+            color: var(--sage);
+            margin: 2.2rem 0 1rem;
+            font-size: 1.45rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            margin-bottom: 1.4rem;
+        }
+
+        ul {
+            padding-left: 1.6rem;
+            margin-bottom: 2rem;
+        }
+
+        li {
+            margin-bottom: 1.1rem;
+        }
+
+        .highlight {
+            background: white;
+            padding: 1.8rem;
+            border-left: 6px solid var(--sage);
+            border-radius: 4px;
+            margin: 2.5rem 0;
+        }
+
+        .cta-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--sage);
+            color: white;
+            padding: 1rem 2.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+            color: #777;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Nervarah</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../index.html#book">Book</a>
+        </nav>
+    </header>
+
+    <h1 class="article-title">Vagus Nerve Stimulation: 6 Simple Exercises You Can Do Anywhere</h1>
+    <div class="meta">March 29, 2026 • by Kris • ~8 min read</div>
+
+    <p>The vagus nerve is one of the most important pathways in your body. It helps switch your nervous system from stress mode into calm, safe mode.</p>
+
+    <p>Stimulating the vagus nerve is a powerful way to regulate your nervous system — especially for trauma healing.</p>
+
+    <div class="highlight">
+        <strong>Why it helps:</strong> A toned vagus nerve helps you feel safer, recover faster from stress, and feel more present in your body.
+    </div>
+
+    <h2>6 Gentle Vagus Nerve Exercises</h2>
+
+    <h3>1. Physiological Sigh</h3>
+    <p>Inhale deeply through your nose, take a second short sip of air, then exhale slowly with a sigh. Repeat 3–5 times.</p>
+
+    <h3>2. Soft Humming</h3>
+    <p>Hum gently on the exhale (“mmm” sound). Feel the vibration in your throat and chest. Do this for 1–2 minutes.</p>
+
+    <h3>3. Deep Belly Breathing with Longer Exhale</h3>
+    <p>Inhale for 4 counts, exhale slowly for 6–8 counts. The longer exhale stimulates the vagus nerve.</p>
+
+    <h3>4. Self-Holding with Slow Breath</h3>
+    <p>Place one hand on your belly and one on your heart. Breathe slowly while gently holding yourself.</p>
+
+    <h3>5. Gargling or Singing</h3>
+    <p>Gargle water slowly or sing a song. The vibration in your throat directly activates the vagus nerve.</p>
+
+    <h3>6. Gentle Cold Exposure</h3>
+    <p>Splash cool (not ice-cold) water on your face or hold a cold drink to your neck for 15–30 seconds.</p>
+
+    <div class="highlight">
+        <strong>Trauma-informed tip:</strong> Start with just 1 or 2 exercises that feel good. Never push through discomfort. Gentleness is key.
+    </div>
+
+    <div class="cta-box">
+        <h2>Want to learn how to use these tools for your unique nervous system?</h2>
+        <p>In 1:1 sessions we personalize vagus nerve work and other somatic practices to fit your healing journey.</p>
+        <a href="../index.html#book" class="cta-btn">Book a Discovery Call</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Nervarah • Nervous System Regulation & Trauma Release</p>
+        <p>Written with care and respect for your healing journey 🌿</p>
+    </footer>
+
+</body>
+</html>
