@@ -1,146 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nervarah • Nervous System Regulation & Trauma Release</title>
-    <style>
-        :root {
-            --sage: #8fa88f;
-            --soft-sage: #a8b9a8;
-            --beige: #f8f4ed;
-            --warm-wood: #d4b89e;
-            --text: #3a3a3a;
-            --light-text: #555;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.75;
-            color: var(--text);
-            background-color: var(--beige);
-        }
-
-        header {
-            background: rgba(255,255,255,0.96);
-            position: sticky; top: 0; z-index: 100;
-            padding: 1.2rem 6%;
-            display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 4px 20px rgba(143, 168, 143, 0.12);
-        }
-
-        .logo h2 { color: var(--sage); font-weight: 700; font-size: 1.85rem; }
-
-        nav a {
-            margin-left: 2.2rem; text-decoration: none; color: var(--text); font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        nav a:hover { color: var(--sage); }
-
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)), 
-                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat; /* Replace with real plant photo */
-            display: flex; align-items: center; color: white; text-align: center; padding: 0 6%;
-            position: relative;
-        }
-
-        .hero::after {
-            content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 220px;
-            background: linear-gradient(transparent, var(--beige));
-        }
-
-        .hero-content { max-width: 820px; margin: 0 auto; z-index: 2; }
-        .hero h1 { font-size: 3.9rem; line-height: 1.1; margin-bottom: 1.6rem; font-weight: 600; }
-        .hero p { font-size: 1.45rem; margin-bottom: 2.8rem; opacity: 0.95; max-width: 680px; margin: 0 auto 2.8rem; }
-
-        .cta-btn {
-            display: inline-block; background: var(--sage); color: white;
-            padding: 1.15rem 3rem; border-radius: 60px; text-decoration: none;
-            font-weight: 600; font-size: 1.15rem;
-            transition: all 0.4s ease; box-shadow: 0 6px 20px rgba(143, 168, 143, 0.35);
-        }
-        .cta-btn:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(143, 168, 143, 0.45); }
-
-        section { padding: 110px 6%; max-width: 1240px; margin: 0 auto; }
-        h2 { font-size: 2.9rem; text-align: center; margin-bottom: 3.5rem; color: #2c3e2f; font-weight: 600; }
-
-        .plant-accent {
-            width: 90px; height: 4px; background: linear-gradient(to right, var(--sage), var(--warm-wood));
-            margin: 2rem auto; border-radius: 2px;
-        }
-
-        footer {
-            background: #2c3e2f; color: #ddd; text-align: center; padding: 4rem 6%;
-        }
-
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
-        .animate { animation: fadeInUp 0.9s ease forwards; }
-    </style>
-<link rel="stylesheet" href="/site.css"></head>
-<body>
-
-    <header>
-        <div class="logo"><h2><a href="/">Nervarah</a></h2></div>
-        <nav aria-label="Main navigation"><a href="/">Home</a><a href="/#about">About</a><a href="/#support">Ways to begin</a><a href="/blog.html">Journal</a><a href="https://getleflo.com/">le flo</a><a href="/#book">Book a call</a></nav>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nervarah | Psychology-informed coaching, yoga &amp; breathwork</title>
+  <meta name="description" content="Holistic healing with Kristin Schutz. Explore private coaching and group workshops that bring applied psychology, gentle yoga, breathwork, and reflection into everyday life.">
+  <meta name="theme-color" content="#f7f5ed">
+  <link rel="canonical" href="https://nervarah.com/">
+  <meta property="og:title" content="Nervarah | Psychology-informed coaching, yoga &amp; breathwork">
+  <meta property="og:description" content="Explore private sessions and group workshops in applied psychology, gentle yoga, breathwork, and holistic healing with Kristin Schutz.">
+  <meta property="og:image" content="https://nervarah.com/assets/studio-practice.jpg">
+  <meta property="og:url" content="https://nervarah.com/">
+  <link rel="stylesheet" href="/nervarah.css">
+</head>
+<body id="home">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="frame">
+    <header class="mast">
+      <a class="wordmark" href="/" aria-label="Nervarah home"><svg viewBox="0 0 36 30" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4"><path d="M2 24C7 24 8 6 16 6s8 18 18 18"/><path d="M2 18c5 0 6-16 14-16s9 16 18 16"/><path d="M2 29c5 0 7-17 14-17s8 17 18 17"/></g></svg>Nervarah</a>
+      <nav aria-label="Main"><a href="#support">Sessions</a><a href="#about">About Kris</a><a href="/blog.html">Journal</a></nav>
+      <a class="button top-cta" href="#book">Get in touch <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 13 13 3M4 3h9v9"/></svg></a>
     </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Come home to your nervous system</h1>
-            <p>Gentle, human-rooted guidance for trauma release and nervous system regulation — creating safety in your body, one breath at a time.</p>
-            <div class="hero-actions"><a href="#book" class="cta-btn">Book a discovery call</a><a href="https://getleflo.com/" class="cta-btn cta-secondary">Explore daily practice with le flo</a></div>
+  </div>
+  <main id="main">
+    <div class="frame">
+      <section class="hero" aria-labelledby="intro">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="rule" aria-hidden="true"></span>Holistic healing with Kristin Schutz</p>
+          <h1 id="intro">Come back<br><em>to yourself.</em></h1>
+          <p class="lede">I’m Kris. I bring psychology, yoga, and breathwork together for the moments when your mind is still racing and your body is asking for a pause.</p>
+          <div class="hero-links"><a class="button" href="https://book.squareup.com/appointments/ihhs807def6uxq/location/L173H1PCK7326/services/YYXUFQERRBL4VNRLCNENRDQE">Book a free call <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 13 13 3M4 3h9v9"/></svg></a><a class="underline" href="#support">Explore sessions <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 2v11m-5-5 5 5 5-5"/></svg></a></div>
         </div>
-    </section>
-
-<section id="support" aria-labelledby="paths-title"><h2 id="paths-title">Choose your next step</h2><p class="section-intro">Start a conversation with Kris, or make space for a self-guided daily practice.</p><div class="path-grid"><div class="path-card"><span class="path-label">Personal support</span><h3>Begin with a conversation</h3><p>A discovery call is a place to ask questions and explore working with Kris.</p><a class="cta-btn" href="#book">Book a discovery call</a></div><div class="path-card leflo"><a class="leflo-brand" href="https://getleflo.com/" aria-label="le flo"><img src="https://getleflo.com/media/le-flo-mark.png" alt=""><img src="https://getleflo.com/media/le-flo-wordmark.svg" alt="le flo"></a><span class="path-label">Self-guided daily practice</span><h3>A little space, every day</h3><p>Explore thirty days of intention, breathing, posture, and meditation, with optional spoken guidance and adjustable practice time.</p><a class="cta-btn" href="https://getleflo.com/">Discover le flo</a><p><a href="https://getleflo.com/blog/how-to-start-meditation/">New to meditation? Start with this guide →</a></p></div></div></section>
-
-    <section id="about">
-        <h2>Your Safe Space for Healing</h2>
-        <div class="plant-accent"></div>
-        <p style="max-width: 720px; margin: 0 auto; text-align: center; font-size: 1.25rem; color: var(--light-text);">
-            Hi, I'm Kris. I help people gently regulate their nervous system and release stored trauma so they can feel safe, present, and alive again.<br><br>
-            This work is rooted in compassion, somatic wisdom, and deep respect for your body’s natural healing intelligence — much like a plant returning to the sun.
-        </p>
-    </section>
-
-    <aside class="journal-link"><h2>Read at your own pace</h2><p>Explore the existing Nervarah journal for articles on breath and daily routines.</p><a href="/blog.html">Visit the Nervarah journal →</a></aside>
-
-    <section id="book" style="background: var(--beige);">
-        <h2>Ready to Begin?</h2>
-        <div class="plant-accent"></div>
-        <p style="text-align: center; font-size: 1.35rem; max-width: 640px; margin: 0 auto 2rem; color: var(--light-text);">
-            Let’s start with a gentle discovery call.
-        </p>
-        <div class="booking-wrap" style="background: white; padding: 3rem; border-radius: 28px; max-width: 900px; margin: 2rem auto 0; box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
-            <!-- Your Square Widget -->
-            <script src='https://square.site/appointments/buyer/widget/ihhs807def6uxq/L173H1PCK7326.js'></script>
+        <div class="hero-photo"><img src="/assets/studio-practice.jpg" width="1254" height="1254" fetchpriority="high" alt="A woman sits on a folded blanket beside a sunlit studio window."></div>
+      </section>
+      <section class="offers section" id="support" aria-labelledby="offer-title">
+        <div class="section-head"><p class="eyebrow">Ways to work together</p><h2 id="offer-title">Find your way in.</h2></div>
+        <div class="offer-list">
+          <article><h3>Private coaching</h3><p>Maybe you finish work and carry the whole day home. We’ll look at what happens in that transition, notice the thoughts and physical cues that come with it, and try a breath or movement practice you can return to on your own.</p><a class="underline" href="mailto:kris@nervarah.com?subject=Private%20coaching%20with%20Kris">Ask about a private session <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 13 13 3M4 3h9v9"/></svg></a></article>
+          <article><h3>Workshops for groups</h3><p>Bring a guided practice to a studio, retreat, or team gathering. A session can combine gentle seated or standing yoga, breath awareness, and a short reflection. We’ll shape it around your group, space, and time.</p><a class="underline" href="mailto:kris@nervarah.com?subject=Yoga%20and%20breathwork%20workshop">Plan a group workshop <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 13 13 3M4 3h9v9"/></svg></a></article>
         </div>
+      </section>
+    </div>
+  <section class="practice" aria-labelledby="practice-title">
+    <div class="practice-inner">
+      <div><p class="eyebrow">A practice to try</p><h2 id="practice-title">Between work and the rest of your day.</h2><p>Before you reach for your keys or open the next app, feel where your feet meet the floor. Let one breath come and go at its own pace. Notice what part of the day you’re still carrying.</p></div>
+      <div class="practice-card"><p class="eyebrow">A question for the pause</p><blockquote>“What do I want to bring into the next part of my day?”</blockquote><p class="note">You might choose a word, stretch your shoulders, or simply sit for another breath.</p></div>
+    </div>
+  </section>
+  <div class="frame">
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="section-head"><p class="eyebrow">Meet your coach</p><h2 id="about-title">Kristin Schutz</h2></div>
+      <div class="bio"><p>I have a master’s degree in applied psychology and over 20 years of teaching experience. I’m trained in Hatha, Vinyasa, and Kundalini yoga, and my coaching has taken me from college teams to executive and government settings.</p><p>What I love is bringing those worlds together. We can talk about a pattern you recognize, then get out of our heads for a moment and explore what changes when you move, breathe, or let yourself be still.</p></div>
     </section>
-
-    <footer><nav aria-label="Main navigation"><a href="/">Home</a><a href="/#about">About</a><a href="/#support">Ways to begin</a><a href="/blog.html">Journal</a><a href="https://getleflo.com/">le flo</a><a href="/#book">Book a call</a></nav>
-        <p>&copy; 2026 Nervarah • Nervous System Regulation & Trauma Release</p>
-        <p style="margin-top: 1rem;">Created with care 🌿</p>
-    </footer>
-
-    <script>
-        // Smooth scroll + animations (same as before)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('animate'); });
-        }, { threshold: 0.15 });
-
-        document.querySelectorAll('section').forEach(s => observer.observe(s));
-    </script>
+    <section id="book" class="contact section" aria-labelledby="contact-title">
+      <div class="section-head"><p class="eyebrow">Get in touch</p><h2 id="contact-title">Let’s start with a conversation.</h2></div>
+      <div><p>Book a free, 30-minute discovery call to talk about what brings you here. If you’re organizing a retreat, workplace session, or studio workshop, you can also email me directly.</p>
+        <a class="button" href="https://book.squareup.com/appointments/ihhs807def6uxq/location/L173H1PCK7326/services/YYXUFQERRBL4VNRLCNENRDQE">Book a discovery call <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 13 13 3M4 3h9v9"/></svg></a><a class="email" href="mailto:kris@nervarah.com?subject=Nervarah%20session%20inquiry">kris@nervarah.com</a>
+      </div>
+    </section>
+  </div>
+  </main>
+  <div class="frame">
+    <footer><a class="foot-brand" href="/">Nervarah</a><nav aria-label="Resources"><a href="/blog.html">Journal</a><a href="https://getleflo.com/">Daily practice with le Flo <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 13 13 3M4 3h9v9"/></svg></a></nav><small>© 2026 Nervarah</small></footer>
+  </div>
 </body>
 </html>
